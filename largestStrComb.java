@@ -25,11 +25,17 @@ public class largestStrComb {
 		List<Integer> list = new ArrayList<Integer>();
 		for (int i = 0; i < num; i++) {
             System.out.print("Number " + (i+1) + " : ");
-            //Error Handling
+            //Error handling
             try {
-                list.add(scanner.nextInt());
+                int testNum = scanner.nextInt();
+                if(testNum >= 0){
+                    list.add(testNum);
+                } else {
+                    System.out.println("Input is a negative integer, type again!");
+                    i--;
+                }
             } catch (Exception e) {
-                System.out.println("Input is not an Integer, start again, please!");
+                System.out.println("Input isn't a non negative integer, try again!");
             }
         }
         
