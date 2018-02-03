@@ -1,4 +1,4 @@
-# Largest String Algorithm 
+# Largest String Algorithm Challenge
 
 Objective: Write a function in Java accepting a list of non negative integers, and returning their largest possible combined number as a string. 
 
