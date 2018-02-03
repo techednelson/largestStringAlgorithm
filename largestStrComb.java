@@ -5,7 +5,7 @@ public class largestStrComb {
     public static String findLargestStrComb(List<String> numList){
 
         List newNumList = numList.stream()
-        .sorted((a, b) -> (a + b).compareTo(b + a))
+        .sorted((a, b) -> (b + a).compareTo(a + b))
         .collect(Collectors.toList());
 
         return String.join("", newNumList);
