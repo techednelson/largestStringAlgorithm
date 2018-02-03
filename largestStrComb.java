@@ -6,15 +6,10 @@ public class largestStrComb {
     /* Method findLargestStrCom converts into string and sorts the List following a declarative style, comparing if b>a or a>b, depending 
     the comparison b proceeds to a or viceversa, this sequence goes on until all the elements are ordered from left to rigth */
     public static String findLargestStrComb(List<Integer> numList){
-
-        // Stream is initialized and result witll be store in newNumList
-        List<String> newNumList = numList.stream()
-        //Each element is converted from Integer to String with built-in coercion
-        .map(e -> "" + e)
-        //Sorted method with a custom compator order the numbers in the desired way
-        .sorted((a, b) -> (b + a).compareTo(a + b))
-        //Ordered numbers are collect into a final list, ending the Stream
-        .collect(Collectors.toList());
+        List<String> newNumList = numList.stream() // Stream is initialized and result witll be store in newNumList    
+        .map(e -> "" + e) //Each element is converted from Integer to String with built-in coercion 
+        .sorted((a, b) -> (b + a).compareTo(a + b)) //Sorted method with a custom compator order the numbers in the desired way
+        .collect(Collectors.toList());//Ordered numbers are collect into a final list, ending the Stream
 
         //The List is converted into a single String representing the largest possible combined number
         return String.join("", newNumList);
@@ -29,8 +24,13 @@ public class largestStrComb {
         //Store the data input into an ArrayList of Integers
 		List<Integer> list = new ArrayList<Integer>();
 		for (int i = 0; i < num; i++) {
-			System.out.print("Number " + (i+1) + " : ");
-		        list.add(scanner.nextInt());
+            System.out.print("Number " + (i+1) + " : ");
+            //Error Handling
+            try {
+                list.add(scanner.nextInt());
+            } catch (Exception e) {
+                System.out.println("Input is not an Integer, start again, please!");
+            }
         }
         
         //Call the method which returns the largest possible combined number
