@@ -1,6 +1,6 @@
 # Largest String Algorithm 
 
-Objective: Write a function accepting a list of non negative integers, and returning their largest possible combined number as a string. 
+Objective: Write a function in Java accepting a list of non negative integers, and returning their largest possible combined number as a string. 
 
 
 For example: 
