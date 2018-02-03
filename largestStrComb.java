@@ -23,6 +23,8 @@ public class largestStrComb {
 		}
         String largestStrComb = findLargestStrComb(list);
         System.out.println(largestStrComb);
+
+        scanner.close();
     }
 }
 
