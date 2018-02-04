@@ -73,11 +73,51 @@ public class LargestNumber {
 ```
 ## My Code Explanation:
 
-I decided to apply the Stream API available since Java 8, Streams allow the application of higher-order-functions like filter, map, reduce and sorted. The methods are the core of Functional Programming a very popoular pattern in lanaguages like JavaScript that use abstraction to program in a declarative way, avoiding to concern about the how to code and simple declaring what whe want the language to do for us.  
+I decided to apply Streams which allow the usage of higher-order-functions like filter, map, reduce and sorted, the core of functional programming. This pattern use abstraction to program in a declarative way, avoiding to concern about the how to code and simple declaring what we want the language to do for us.
 
-Basically with help of a scanner, user can input numbers, they are converted into a integer list. Once the findLargestNumber method received that list, a stream is initialized, so map converts each element into a string, then,  they are ordered in the desired way with the help of Sorted method and a custom comparator following the logic in the explanaiton section.
+Basically with help of a scanner, the user can enter numbers which are later converted into a integer list. Once the findLargestNumber method receives that list, a stream is initialised, so map converts each element into a string, then, they are ordered in the desired way with the help of Sorted method and a custom comparator following the logic mentioned in the explanation section.
 
-Finally the ordered or sorted strings are collected into a list to be converted in a final String representing the largest possible combined number.
+Finally the ordered or sorted strings are collected into a list in order to be converted in a final String representing the largest possible combined number.
+
+
+## How to run the code
+
+The code can be run directly from any command line simple by being inside the folder where all the files exist.
+
+To run from command line on Linux, MacOs or Windows
+```
+java LargestNumber
+```
+
+Note: The program is but in case of a new compilation, the command is:
+```
+javac LargestNumber.java in Linux, MacOs or Windows.
+```
+
+
+## How to run the Unit Test
+
+To run from command line on Linux or MacOs
+```
+java -cp .:junit-4.12.jar:hamcrest-core-1.3.jar org.junit.runner.JUnitCore LargestNumberTest
+```
+
+To run from command line on Windows
+```
+java -cp .;junit-4.12.jar;hamcrest-core-1.3.jar org.junit.runner.JUnitCore LargestNumberTest
+```
+
+Note: The program is compiled but in case of a new compilation the command is:
+
+On Linux or MacOS
+```
+javac -cp .:junit-4.XX.jar:hamcrest-core-1.3.jar LargestNumberTest.java
+```
+
+On Windows
+```
+javac -cp .;junit-4.XX.jar;hamcrest-core-1.3.jar LargestNumberTest.java
+```
 
 ## License
 
