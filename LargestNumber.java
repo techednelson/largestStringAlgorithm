@@ -1,11 +1,11 @@
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class largestStrComb {
+public class LargestNumber {
     
     /* Method findLargestStrCom converts into string and sorts the List following a declarative style, comparing if b>a or a>b, depending 
     the comparison b proceeds to a or viceversa, this sequence goes on until all the elements are ordered from left to rigth */
-    public static String findLargestStrComb(List<Integer> numList){
+    public static String findLargestNumber(List<Integer> numList){
         List<String> newNumList = numList.stream() // Stream is initialized and result witll be store in newNumList    
         .map(e -> "" + e) //Each element is converted from Integer to String with built-in coercion 
         .sorted((a, b) -> (b + a).compareTo(a + b)) //Sorted method with a custom compator order the numbers in the desired way
@@ -40,8 +40,8 @@ public class largestStrComb {
         }
         
         //Call the method which returns the largest possible combined number
-        String largestStrComb = findLargestStrComb(list);
-        System.out.println(largestStrComb);
+        String largestNumber = findLargestNumber(list);
+        System.out.println(largestNumber);
 
         //Once the program is done, scanner is closed to avoid resources leak
         scanner.close();
