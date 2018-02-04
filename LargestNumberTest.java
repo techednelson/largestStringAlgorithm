@@ -7,7 +7,7 @@ public class LargestNumberTest {
   public void evaluatesList() {
     LargestNumber testList = new LargestNumber();
     List<Integer> testNumbers = Arrays.asList(420, 42, 423);
-    String testSrt = testList.findLargestNumber(testNumbers);
+    String testSrt = LargestNumber.findLargestNumber(testNumbers);
     assertEquals("42423420", testSrt);
   }
 }
