@@ -73,7 +73,7 @@ public class LargestNumber {
 ```
 ## My Code Explanation:
 
-I decided to apply Streams which allow the usage of higher-order-functions like filter, map, reduce and sorted, the core of functional programming. This pattern use abstraction to program in a declarative way, avoiding to concern about the how to code and simple declaring what we want the language to do for us.
+I decided to apply Streams which allow the usage of higher-order-functions like filter, map, reduce and sorted, the core of functional programming. This pattern uses abstraction to program in a declarative way, avoiding to concern about the how to code and simple declaring what we want the language to do for us.
 
 Basically with help of a scanner, the user can enter numbers which are later converted into a integer list. Once the findLargestNumber method receives that list, a stream is initialised, so map converts each element into a string, then, they are ordered in the desired way with the help of Sorted method and a custom comparator following the logic mentioned in the explanation section.
 
